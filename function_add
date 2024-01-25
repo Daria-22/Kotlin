@@ -5,13 +5,23 @@ fun main() {
     
     val result = add(firstNumber, secondNumber)
     val anotherResult = add(firstNumber, thirdNumber)
+    
+    val result_subtr = subtract (firstNumber, secondNumber)
+    val anotherResultSubtr = subtract(firstNumber, thirdNumber)
 
     println("$firstNumber + $secondNumber = $result")
     println("$firstNumber + $thirdNumber = $anotherResult")
+    
+    println("$firstNumber - $secondNumber = $result_subtr")
+    println("$firstNumber - $thirdNumber = $anotherResultSubtr")
 }
 
 // Define add() function below this line
 fun add(a: Int, b: Int): Int {
     var sum = a + b
     return sum
+}
+fun subtract(a: Int, b: Int): Int {
+    var subtraction = a - b
+    return subtraction
 }
