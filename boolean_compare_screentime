@@ -1,0 +1,9 @@
+fun main() {
+    val today = 4
+    val yesterday = 5
+    println("Today you spent more hours on your phone than yesterday: " + compareTheScreenTime(today, yesterday)) 
+}
+
+fun compareTheScreenTime(today: Int, yesterday: Int): Boolean {
+    return today > yesterday
+}
