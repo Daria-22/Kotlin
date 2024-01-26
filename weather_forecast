@@ -1,0 +1,13 @@
+fun main() {
+    println(cityWeather("Ankara", 27, 31, 82))
+    println(' ')
+    println(cityWeather("Tokyo", 32, 36, 10))
+    println(' ')
+    println(cityWeather("Cape Town", 59, 64, 2))
+    println(' ')
+    println(cityWeather("Guatemala City", 50, 55, 7))
+}
+
+fun cityWeather(city: String, lowTemperature: Int, highTemperature: Int, chanceOfRain: Int): String {
+    return " City: $city\n Low temperature: $lowTemperature, High temperature: $highTemperature\n Chance of rain: $chanceOfRain %"
+}
