@@ -1,0 +1,3 @@
+fun main() {println ("Coding is fun!")}
+
+define function - fun,  main - start of code, (for paramaters), {what to do in the function}
