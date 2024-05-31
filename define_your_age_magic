@@ -1,0 +1,16 @@
+//this program determines the user's age by elliciting two numbers of their age, producing the effect of magic
+//first digit x 5 => + 3 => x 2 => + second digit => - 6 = age
+// does not work with 100
+
+fun main() {
+    val userName = "Olga"
+    var magicNum: Int
+    magicNum = 9 * 5
+    magicNum += 3
+    magicNum *= 2
+    magicNum += 0
+    magicNum -= 6
+    println("${userName}'s age is ${magicNum}")
+
+
+}
