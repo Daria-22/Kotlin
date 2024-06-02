@@ -1,0 +1,28 @@
+fun main() {
+  var a = true
+  var b = false
+  var c = true
+  var d = false
+
+//true OR FALSE => true 
+if (a || b) {
+    println("Hoorah!")
+  }
+
+// Not False(true) AND True => true
+if (!b && c) {
+    println("Woohoo!")
+  }
+
+// true or false => true
+if (a || d) {
+    println("Yay!")
+  }
+
+//  true  and false = true=> not true => true
+  if (!(!d && b)) {
+    println("Wow!")
+  }
+
+
+}
