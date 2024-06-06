@@ -1,0 +1,19 @@
+import java.time.LocalTime
+
+fun main(){
+  // Write your code below
+val currentTime = LocalTime.now() 
+//find out what time it is now and print
+println(currentTime)
+
+//set the start and the end of working day
+val startTime = LocalTime.of(9, 0)
+val endTime = LocalTime.of(17, 0)
+
+if (currentTime > endTime) {println("Time to finish")
+} else if (currentTime > startTime || currentTime < endTime) {
+ println("Time to work") 
+}
+
+  
+}
