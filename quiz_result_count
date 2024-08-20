@@ -1,0 +1,63 @@
+//kotlinc Quiz.kt -include-runtime -d myCode.jar
+//java -jar myCode.jar
+
+fun main() {
+    val quizAnswer1 = 15
+    val quizAnswer2 = 3
+    val quizAnswer3 = "isosceles"
+    val quizAnswer4 = 47
+
+    // Write your code below
+//get user input
+    println("What is 75 / 5?")
+    val studentAnswer1 = readLine()?.toIntOrNull() ?: 0
+
+    println("What is the value of y in the equation: 6 * 2y = 36?")
+    val studentAnswer2 = readLine()?.toIntOrNull() ?: 0
+
+    println("What type of triangle has two equal sides?")
+    val studentAnswer3 = readLine()?.toLowerCase() ?: ""
+
+    println("What is the value of 8 * 6 - (3 - 2)?")
+    val studentAnswer4 = readLine()?.toIntOrNull() ?: 0
+
+    //start ounting points
+    var points = 0
+
+    if (studentAnswer1 == quizAnswer1) {
+        points += 25
+    }
+
+    if (studentAnswer2 == quizAnswer2) {
+        points += 25
+    } else if (quizAnswer2 + 1 == studentAnswer2 || quizAnswer2 - 1 == studentAnswer2) {
+        points += 20
+        println("The answer $studentAnswer2 is within 1 point of $quizAnswer2.")
+    }
+
+    if (studentAnswer3 == quizAnswer3) {
+        points += 25
+    } else if (studentAnswer3 == "equilateral") {
+        points += 10
+    } else {
+        points += 1
+    }
+
+    if (studentAnswer4 == quizAnswer4) {
+        points += 25
+    } else if (studentAnswer4 in 44..54) {
+        points += 20
+    } else {
+        points += 1
+    }
+
+    when {
+        points in 0..59 -> println("You received F")
+        points in 60..69 -> println("You received D")
+        points in 70..79 -> println("You received C")
+        points in 80..89 -> println("You received B")
+        points in 90..100 -> println("You received A")
+        points in 101..110 -> println("You received A+")
+        else -> println("Invalid result")
+    }
+}
